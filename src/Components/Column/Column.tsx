@@ -8,16 +8,23 @@ export default function Column({ status }: ColumnProps) {
     memberData: [],
     updateMember: () => {},
     deleteMember: () => {},
-    numMembersByStatus: {} as { [key: string]: number }, // Fallback with explicit type
+    numMembersByStatus: {} as { [key: string]: number },
   };
   return (
     <>
       <div className="h-full">
-        <h3 className="text-lg text-white font-semibold">
-          {status} ({numMembersByStatus[status] || 0})
+        <h3 className="text-lg text-white font-semibold my-2">
+          <div className="flex justify-center items-center gap-x-3">
+            <span>{status}</span>
+            <span className="h-[30px] w-[30px] rounded-full flex justify-center items-center bg-yellow-900 ">
+              {numMembersByStatus[status] || 0}
+            </span>
+          </div>
         </h3>
-        <div className="border h-full  p-2 border-teal-300 w-full rounded-lg">
-          <Card status={status} />
+        <div className="max-h-screen overflow-y-scroll border border-teal-300 w-full rounded-lg">
+          <div className="  h-full  p-2  ">
+            <Card status={status} />
+          </div>
         </div>
       </div>
     </>

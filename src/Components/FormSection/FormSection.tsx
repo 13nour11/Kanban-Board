@@ -103,8 +103,9 @@ export default function FormSection() {
     } else {
       addMember({ ...formValues, id: Date.now() });
     }
-
+    
     resetFormValues(formValues);
+    // reset the form
     formik.resetForm();
   };
 

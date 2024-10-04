@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btnStyle {
+  @apply  text-white bg-teal-500 duration-300 hover:bg-transparent hover:border hover:border-teal-300 hover:text-teal-300;
+}
+/* 
+
+focus:ring focus:ring-yellow-300 focus:ring-offset-2 focus:outline-none
+*/

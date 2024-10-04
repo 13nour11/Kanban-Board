@@ -105,6 +105,7 @@ export default function FormSection() {
     }
 
     resetFormValues(formValues);
+    formik.resetForm();
   };
 
   const formik = useFormik({
